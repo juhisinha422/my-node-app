@@ -36,24 +36,18 @@ npm install express
 
 **Create `index.js`:**
 ```javascript
-const express = require('express');
+const express = require("express");
+const path = require("path");
+
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.json({
-    message: 'Hello from CI/CD Pipeline!',
-    version: '1.0.0',
-    timestamp: new Date().toISOString()
-  });
+// Serve index.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get('/health', (req, res) => {
-  res.json({ status: 'healthy' });
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(3000, "0.0.0.0", () => {
+  console.log("Server running on port 3000");
 });
 ```
 
