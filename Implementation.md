@@ -51,6 +51,26 @@ app.listen(3000, "0.0.0.0", () => {
 });
 ```
 
+**Create `index.html`:**
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: monospace;
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+        Hi Juhi Sinha, how are you?
+  </body>
+</html>
+```
+
 **Update `package.json` scripts section:**
 ```json
 {
