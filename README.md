@@ -92,4 +92,6 @@ The application is containerized using Docker to ensure:
 http://<EC2_PUBLIC_IP>:3000
 ```
 
+<img width="1892" height="800" alt="Image" src="https://github.com/user-attachments/assets/e85f7cc2-2ce0-4f94-ae67-3da060d453fb" />
+
 
