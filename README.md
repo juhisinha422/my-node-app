@@ -35,3 +35,61 @@ The CI/CD pipeline automates the complete deployment workflow:
 
 ## 📂 Project Structure
 
+my-node-app/
+
+├── .github/workflows/
+
+│ └── ci-cd.yml
+
+├── Dockerfile
+
+├── index.js
+
+├── index.html
+
+├── package.json
+
+├── package-lock.json
+
+└── README.md
+
+
+---
+
+## ⚙️ CI/CD Workflow
+
+### Continuous Integration (CI)
+- Triggered on every push to the `main` branch
+- Builds Docker image for the application
+- Tags the image as `latest`
+
+### Continuous Deployment (CD)
+- Pushes Docker image to Docker Hub
+- Connects to AWS EC2 using SSH
+- Pulls the latest image
+- Stops and removes the existing container
+- Runs the updated container automatically
+
+---
+
+## 🐳 Docker
+
+The application is containerized using Docker to ensure:
+- Consistent environments
+- Easy scalability
+- Reliable deployments
+
+---
+
+## ☁️ AWS EC2 Deployment
+
+- EC2 instance runs Docker
+- GitHub Actions deploys via SSH
+- Application runs on **port 3000**
+
+## Access the application:
+```bash
+http://<EC2_PUBLIC_IP>:3000
+```
+
+
