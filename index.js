@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hello from CI/CD Pipeline!',
+    message: 'Hello Miss Sinha, from CI/CD Pipeline!',
     version: '2.0.0',
     timestamp: new Date().toISOString()
   });
